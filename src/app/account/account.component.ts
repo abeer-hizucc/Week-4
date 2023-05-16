@@ -10,8 +10,8 @@ import { AccountsService } from '../accounts.service';
   // providers: [LoggingService]
 })
 export class AccountComponent {
-  @Input() account: {name: string, status: string};
-  @Input() id: number;
+  @Input() account!: {name: string, status: string};
+  @Input() id!: number;
 
   constructor(private loggingService: LoggingService,
               private accountsService: AccountsService) {}
