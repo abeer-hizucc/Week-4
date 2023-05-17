@@ -6,7 +6,9 @@
       <app-account
         *ngFor="let acc of accounts; let i = index"
         [account]="acc"
-        [id]="i"></app-account>
+        [id]="i" >
+      <button (click) = "editAccount(acc)"></button>
+      </app-account>
     </div>
   </div>
 </div>

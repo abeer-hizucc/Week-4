@@ -8,6 +8,9 @@ import { AccountsService } from './accounts.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+editAccount(_t9: { name: string; status: string; }) {
+throw new Error('Method not implemented.');
+}
   accounts: {name: string, status: string}[] = [];
 
   constructor(private accountsService: AccountsService) {}

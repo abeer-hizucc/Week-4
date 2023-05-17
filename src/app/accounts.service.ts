@@ -31,4 +31,10 @@ export class AccountsService {
     this.accounts[id].status = status;
     this.loggingService.logStatusChange(status);
   }
+  editAccount(id: number, name: string, status: string) {
+    this.accounts[id].name = name;
+    this.accounts[id].status = status;
+    this.loggingService.logStatusChange(status);
+  }
+ 
 }

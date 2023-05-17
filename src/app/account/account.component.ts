@@ -21,4 +21,8 @@ export class AccountComponent {
     // this.loggingService.logStatusChange(status);
     this.accountsService.statusUpdated.emit(status);
   }
+  onEditTo(name: string, status: string) {
+    this.accountsService.editAccount(this.id, name, status);
+    console.log("account"+this.id+" edited");
+  }
 }
