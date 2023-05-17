@@ -8,8 +8,16 @@
         
         [account]="acc"
         [id]="getId(acc)"></app-account>
-      
-      <button class="btn btn-info" (click)="editAccount(getId(acc),acc.name,acc.status)">Edit</button>
+        <div class="input-group">
+          <input
+            type="text"
+            [(ngModel)]="accounts[i].name"
+            [class.d-none]="!isEditing(i)"
+            class="form-control"
+            placeholder="New Name"
+          >
+          <div class="input-group-append">
+          <button class="btn btn-info" (click)="toggleEdit(i)">Edit</button>
     </div>
       
         
